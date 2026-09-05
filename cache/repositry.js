@@ -1,4 +1,4 @@
 class Repository {
 }
 
-module.exports = Repositry
+module.exports = Repository

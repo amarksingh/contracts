@@ -1,0 +1,85 @@
+const fs = require('fs');
+const path = require('path');
+
+function getAllJsFiles(dirPath, arrayOfFiles = []) {
+    const files = fs.readdirSync(dirPath);
+
+    files.forEach((file) => {
+        const fullPath = path.join(dirPath, file);
+        if (fs.statSync(fullPath).isDirectory()) {
+            if (file !== 'node_modules' && file !== 'coverage' && file !== '.git') {
+                getAllJsFiles(fullPath, arrayOfFiles);
+            }
+        } else if (file.endsWith('.js') && file !== 'jest.config.js') {
+            arrayOfFiles.push(fullPath);
+        }
+    });
+
+    return arrayOfFiles;
+}
+
+describe('@ostro/contracts Comprehensive Unit Tests & Integrity Verification', () => {
+
+    const rootDir = path.resolve(__dirname, '..');
+    const contractFiles = getAllJsFiles(rootDir).filter(f => !f.includes('/test/'));
+
+    test('All contract files export a valid class constructor or object', () => {
+        expect(contractFiles.length).toBeGreaterThan(30);
+
+        contractFiles.forEach((filePath) => {
+            const relativePath = path.relative(rootDir, filePath);
+            let exported;
+            expect(() => {
+                exported = require(filePath);
+            }).not.toThrow();
+
+            expect(exported).toBeDefined();
+            expect(typeof exported === 'function' || typeof exported === 'object').toBe(true);
+
+            if (typeof exported === 'function') {
+                expect(() => new exported()).not.toThrow();
+                const instance = new exported();
+                expect(instance).toBeInstanceOf(exported);
+            }
+        });
+    });
+
+    test('ApplicationContract exposes method stubs and default behavior', () => {
+        const ApplicationContract = require('../container/application');
+        const app = new ApplicationContract();
+
+        expect(app).toBeInstanceOf(ApplicationContract);
+        expect(app.alias()).toBeUndefined();
+        expect(app.wrap(() => {})).toBeUndefined();
+        expect(app.call(() => {})).toBeUndefined();
+        expect(app.factory('test')).toBeUndefined();
+        expect(app.makeWith('test')).toBeUndefined();
+        expect(app.make('test')).toBeUndefined();
+        expect(app.resolve('test')).toBeUndefined();
+        expect(app.loadPath('test')).toBeUndefined();
+        expect(app.isBuildable('test')).toBeUndefined();
+        expect(app.build('test')).toBeUndefined();
+        expect(app.getBindings()).toBeUndefined();
+        expect(app.bind('k', 'c')).toBeUndefined();
+        expect(app.singleton('k', 'c')).toBeUndefined();
+        expect(app.getOrCreateSingleton('k', 'c')).toBeUndefined();
+        expect(app.app('k')).toBeUndefined();
+        expect(app.forgetInstance('k')).toBeUndefined();
+        expect(app.instance('k', {})).toBeUndefined();
+    });
+
+    test('Custom subclass extending contract retains inheritance prototype chain', () => {
+        const ApplicationContract = require('../container/application');
+        class CustomApp extends ApplicationContract {
+            make(abstract) {
+                return `custom:${abstract}`;
+            }
+        }
+
+        const custom = new CustomApp();
+        expect(custom).toBeInstanceOf(CustomApp);
+        expect(custom).toBeInstanceOf(ApplicationContract);
+        expect(custom.make('test')).toBe('custom:test');
+    });
+
+});
