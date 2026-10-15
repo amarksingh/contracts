@@ -1,3 +1,6 @@
+/**
+ * Class Repository.
+ */
 class Repository {
 }
 

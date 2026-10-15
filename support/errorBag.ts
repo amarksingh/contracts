@@ -1,3 +1,6 @@
+/**
+ * Class ErrorBag.
+ */
 class ErrorBag{
 
 }

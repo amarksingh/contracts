@@ -1,3 +1,6 @@
+/**
+ * Class RuntimeException.
+ */
 class RuntimeException {
 
 }

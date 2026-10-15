@@ -1,3 +1,6 @@
+/**
+ * Class Kernel.
+ */
 class Kernel{
 
 }

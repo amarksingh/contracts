@@ -1,3 +1,6 @@
+/**
+ * Class TokenMismatchException.
+ */
 class TokenMismatchException{
 }
 

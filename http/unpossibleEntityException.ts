@@ -1,3 +1,6 @@
+/**
+ * Class UnpossibleEntityException.
+ */
 class UnpossibleEntityException{
 
 }

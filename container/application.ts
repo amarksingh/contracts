@@ -1,6 +1,14 @@
 
+/**
+ * Class Application.
+ */
 class Application{
 
+    /**
+     * alias definition.
+     * @param {*} alias
+     * @returns {any}
+     */
     alias(alias = {}) {
 
     }
@@ -35,6 +43,11 @@ class Application{
 
     }
 
+    /**
+     * loadPath definition.
+     * @param {*} dir
+     * @returns {any}
+     */
     loadPath(dir){
 
     }
@@ -54,18 +67,42 @@ class Application{
 
     }
 
+    /**
+     * bind definition.
+     * @param {*} key
+     * @param {*} callback
+     * @param {*} singleton
+     * @returns {any}
+     */
     bind(key, callback,singleton=false) {
 
     }
 
+    /**
+     * singleton definition.
+     * @param {*} $abstract
+     * @param {*} $concrete
+     * @returns {any}
+     */
     singleton($abstract, $concrete) {
 
     }
 
+    /**
+     * getOrCreateSingleton definition.
+     * @param {*} $abstract
+     * @param {*} $concrete
+     * @returns {any}
+     */
     getOrCreateSingleton($abstract, $concrete) {
 
     }
 
+    /**
+     * app definition.
+     * @param {*} key
+     * @returns {any}
+     */
     app(key) {
 
     }

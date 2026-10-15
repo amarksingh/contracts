@@ -1,3 +1,6 @@
+/**
+ * Class Jar.
+ */
 class Jar{
 
 }

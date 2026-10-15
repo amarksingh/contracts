@@ -1,3 +1,6 @@
+/**
+ * Class CommandNotFoundException.
+ */
 class CommandNotFoundException {
 
 }

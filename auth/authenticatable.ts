@@ -1,3 +1,6 @@
+/**
+ * Class Authenticatable.
+ */
 class Authenticatable{
 
 }

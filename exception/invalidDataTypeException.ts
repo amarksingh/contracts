@@ -1,3 +1,6 @@
+/**
+ * Class InvalidDataTypeException.
+ */
 class InvalidDataTypeException{
 
 }

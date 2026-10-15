@@ -1,3 +1,6 @@
+/**
+ * Class Session.
+ */
 class Session{
 
 }

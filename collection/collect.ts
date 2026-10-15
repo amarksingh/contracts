@@ -1,3 +1,6 @@
+/**
+ * Class CollectContract.
+ */
 class CollectContract {
 
 }

@@ -1,3 +1,6 @@
+/**
+ * Class Input.
+ */
 class Input{
 
 }

@@ -1,3 +1,6 @@
+/**
+ * Class PageNotFoundException.
+ */
 class PageNotFoundException{
 
 }

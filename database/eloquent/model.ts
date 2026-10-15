@@ -1,3 +1,6 @@
+/**
+ * Class Model.
+ */
 class Model{
 
 }

@@ -1,3 +1,6 @@
+/**
+ * Class FileNotFoundException.
+ */
 class FileNotFoundException{
 
 }

@@ -1,3 +1,6 @@
+/**
+ * Class GenericUserInterface.
+ */
 class GenericUserInterface{
 
 }

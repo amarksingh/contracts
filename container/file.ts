@@ -1,3 +1,6 @@
+/**
+ * Class File.
+ */
 class File{
 
 }

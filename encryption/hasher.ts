@@ -1,3 +1,6 @@
+/**
+ * Class Hasher.
+ */
 class Hasher{
 
 }

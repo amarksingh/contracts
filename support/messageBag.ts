@@ -1,3 +1,6 @@
+/**
+ * Class MessageBag.
+ */
 class MessageBag{
 
 }

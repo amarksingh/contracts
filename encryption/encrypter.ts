@@ -1,3 +1,6 @@
+/**
+ * Class EncrypterContract.
+ */
 class EncrypterContract{
 
 }

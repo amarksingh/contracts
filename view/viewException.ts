@@ -1,3 +1,6 @@
+/**
+ * Class ViewException.
+ */
 class ViewException extends Error{
 
 }

@@ -1,3 +1,6 @@
+/**
+ * Class FileUploadException.
+ */
 class FileUploadException{
 
 }

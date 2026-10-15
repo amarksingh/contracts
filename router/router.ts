@@ -1,3 +1,6 @@
+/**
+ * Class Router.
+ */
 class Router{
 
 }

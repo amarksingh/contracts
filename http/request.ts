@@ -1,3 +1,6 @@
+/**
+ * Class HttpRequest.
+ */
 class HttpRequest{
 
 }

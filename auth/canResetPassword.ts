@@ -1,3 +1,6 @@
+/**
+ * Class CanResetPassword.
+ */
 class CanResetPassword{
 
 }

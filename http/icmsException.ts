@@ -1,3 +1,6 @@
+/**
+ * Class IcmsException.
+ */
 class IcmsException{
 
 }

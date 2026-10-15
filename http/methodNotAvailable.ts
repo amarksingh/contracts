@@ -1,3 +1,6 @@
+/**
+ * Class MethodNotAvailable.
+ */
 class MethodNotAvailable{
 
 }

@@ -1,3 +1,6 @@
+/**
+ * Class ValidationException.
+ */
 class ValidationException {
 
 }

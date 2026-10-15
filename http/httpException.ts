@@ -1,3 +1,6 @@
+/**
+ * Class HttpException.
+ */
 class HttpException extends Error{
 
 }

@@ -1,3 +1,6 @@
+/**
+ * Class JsonException.
+ */
 class JsonException{
 
 }

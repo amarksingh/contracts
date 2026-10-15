@@ -1,3 +1,6 @@
+/**
+ * Class Serverless.
+ */
 class Serverless{
 
 }

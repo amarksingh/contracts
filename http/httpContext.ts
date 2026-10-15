@@ -1,3 +1,6 @@
+/**
+ * Class HttpContext.
+ */
 class HttpContext{
 
 }

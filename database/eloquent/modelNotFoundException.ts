@@ -1,3 +1,6 @@
+/**
+ * Class ModelNotFoundException.
+ */
 class ModelNotFoundException extends Error{
 
 }

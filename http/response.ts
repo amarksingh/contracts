@@ -1,3 +1,6 @@
+/**
+ * Class HttpResponse.
+ */
 class HttpResponse{
 
 }
