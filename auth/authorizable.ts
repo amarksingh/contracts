@@ -1,8 +1,23 @@
 /**
- * Class Authorizable.
+ * Interface defining Authorizable Contract.
  */
-class Authorizable{
-
+interface IAuthorizable {
+    can(ability: string, ...args: any[]): Promise<boolean> | boolean;
+    cannot(ability: string, ...args: any[]): Promise<boolean> | boolean;
 }
 
-module.exports = Authorizable
+/**
+ * Class Authorizable.
+ */
+class Authorizable implements IAuthorizable {
+    can(ability: string, ...args: any[]): Promise<boolean> | boolean {
+        return false;
+    }
+
+    cannot(ability: string, ...args: any[]): Promise<boolean> | boolean {
+        return true;
+    }
+}
+
+export type { IAuthorizable };
+module.exports = Authorizable;

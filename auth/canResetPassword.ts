@@ -1,7 +1,22 @@
 /**
+ * Interface defining CanResetPassword Contract.
+ */
+interface ICanResetPassword {
+    getEmailForPasswordReset(): string;
+    sendPasswordResetNotification(token: string): Promise<void> | void;
+}
+
+/**
  * Class CanResetPassword.
  */
-class CanResetPassword{
+class CanResetPassword implements ICanResetPassword {
+    getEmailForPasswordReset(): string {
+        return '';
+    }
 
+    sendPasswordResetNotification(token: string): Promise<void> | void {
+    }
 }
-module.exports = CanResetPassword
+
+export type { ICanResetPassword };
+module.exports = CanResetPassword;
