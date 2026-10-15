@@ -2,7 +2,6 @@
  * Interface defining HttpRequest Contract.
  */
 interface IHttpRequest {
-    method(): string;
     path(): string;
     url(): string;
     fullUrl(): string;
@@ -22,9 +21,7 @@ interface IHttpRequest {
  * Class HttpRequest.
  */
 class HttpRequest implements IHttpRequest {
-    method(): string {
-        return 'GET';
-    }
+    method: string = 'GET';
 
     path(): string {
         return '/';
