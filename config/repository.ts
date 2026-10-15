@@ -1,7 +1,16 @@
 /**
- * Class Repository.
+ * Interface defining configuration repository contracts.
  */
-class Repository {
+interface IConfigRepository {
+    get<T = unknown>(key: string, defaultValue?: T | null): T | null;
+    set<T = unknown>(key: string, value: T): any;
+    has(key: string): boolean;
+}
+
+/**
+ * Class Repository Contract.
+ */
+class Repository implements IConfigRepository {
     /**
      * Get the specified configuration value.
      *
@@ -9,7 +18,8 @@ class Repository {
      * @param {*} [defaultValue]
      * @returns {*}
      */
-    get(key: string, defaultValue?: any): any {
+    get<T = unknown>(key: string, defaultValue?: T | null): T | null {
+        return null;
     }
 
     /**
@@ -19,7 +29,7 @@ class Repository {
      * @param {*} value
      * @returns {*}
      */
-    set(key: string, value: any): any {
+    set<T = unknown>(key: string, value: T): any {
     }
 
     /**
@@ -33,4 +43,6 @@ class Repository {
     }
 }
 
+export type { IConfigRepository };
 module.exports = Repository;
+
