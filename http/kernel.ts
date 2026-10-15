@@ -1,44 +1,50 @@
 
 /**
- * Class Kernel.
+ * Interface defining Http Kernel Contract.
  */
-class Kernel
-{
-
-     /**
-      * bootstrap definition.
-      * @returns {any}
-      */
-     bootstrap(){
-
-     }
-
-     /**
-      * handle definition.
-      * @param {*} $request
-      * @returns {any}
-      */
-     handle($request){
-
-     }
-
-     /**
-      * terminate definition.
-      * @param {*} $request
-      * @param {*} $response
-      * @returns {any}
-      */
-     terminate($request, $response){
-
-     }
-
-     /**
-      * getApplication definition.
-      * @returns {any}
-      */
-     getApplication(){
-
-     }
+interface IHttpKernel {
+    bootstrap(): Promise<void> | void;
+    handle(request: any): Promise<any>;
+    terminate(request: any, response: any): Promise<void> | void;
+    getApplication(): any;
 }
 
-module.exports = Kernel
+/**
+ * Class Kernel.
+ */
+class Kernel implements IHttpKernel {
+
+    /**
+     * bootstrap definition.
+     * @returns {void}
+     */
+    bootstrap(): void {
+    }
+
+    /**
+     * handle definition.
+     * @param {*} $request
+     * @returns {Promise<any>}
+     */
+    async handle($request: any): Promise<any> {
+    }
+
+    /**
+     * terminate definition.
+     * @param {*} $request
+     * @param {*} $response
+     * @returns {void}
+     */
+    terminate($request: any, $response: any): void {
+    }
+
+    /**
+     * getApplication definition.
+     * @returns {any}
+     */
+    getApplication(): any {
+    }
+}
+
+export type { IHttpKernel };
+module.exports = Kernel;
