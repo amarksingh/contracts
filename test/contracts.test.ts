@@ -10,7 +10,7 @@ function getAllJsFiles(dirPath, arrayOfFiles = []) {
             if (file !== 'node_modules' && file !== 'coverage' && file !== '.git') {
                 getAllJsFiles(fullPath, arrayOfFiles);
             }
-        } else if (file.endsWith('.js') && file !== 'jest.config.js') {
+        } else if ((file.endsWith('.ts') || file.endsWith('.js')) && file !== 'jest.config.js') {
             arrayOfFiles.push(fullPath);
         }
     });
