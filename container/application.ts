@@ -1,7 +1,30 @@
 /**
+ * Interface defining Container Application Contract.
+ */
+interface IContainer {
+    alias(alias?: Record<string, any>): void;
+    wrap($callback: Function, $parameters?: any[]): Function;
+    call($callback: any, $parameters?: any[]): any;
+    factory($abstract: any): Function;
+    makeWith<T = any>($abstract: any, ...$parameters: any[]): T;
+    make<T = any>($abstract: any, ...$parameters: any[]): T;
+    resolve<T = any>($abstract: any, $parameters?: any[]): T;
+    loadPath(dir: any): any;
+    isBuildable($concrete: any): boolean;
+    build<T = any>($concrete: any, $parameters?: any[]): T;
+    getBindings(): Record<string, any>;
+    bind(key: string, callback: any, singleton?: boolean): any;
+    singleton($abstract: any, $concrete?: any): any;
+    getOrCreateSingleton($abstract: any, $concrete?: any): any;
+    app<T = any>(key?: string): T;
+    forgetInstance($abstract: any): void;
+    instance($abstract: any, $instance: any): any;
+}
+
+/**
  * Class Application.
  */
-class Application {
+class Application implements IContainer {
 
     /**
      * alias definition.
@@ -168,4 +191,5 @@ class Application {
 
 }
 
+export type { IContainer };
 module.exports = Application;
