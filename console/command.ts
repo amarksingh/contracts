@@ -1,7 +1,35 @@
 /**
- * Class Command.
+ * Interface defining Console Command Contract.
  */
-class Command{
-
+interface ICommand {
+    getApp(): any;
+    setApp(app: any): void;
+    getConsole(): any;
+    setConsole(console: any): void;
+    execute(): Promise<any> | any;
 }
-module.exports = Command
+
+/**
+ * Class Command Contract.
+ */
+class Command implements ICommand {
+    getApp(): any {
+        return null;
+    }
+
+    setApp(app: any): void {
+    }
+
+    getConsole(): any {
+        return null;
+    }
+
+    setConsole(console: any): void {
+    }
+
+    execute(): Promise<any> | any {
+    }
+}
+
+export type { ICommand };
+module.exports = Command;
