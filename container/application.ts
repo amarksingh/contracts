@@ -1,80 +1,120 @@
-
 /**
  * Class Application.
  */
-class Application{
+class Application {
 
     /**
      * alias definition.
-     * @param {*} alias
-     * @returns {any}
+     * @param {Record<string, any>} alias
+     * @returns {void}
      */
-    alias(alias = {}) {
+    alias(alias: Record<string, any> = {}): void {
 
     }
 
-    wrap($callback,  $parameters = [])
-    {
+    /**
+     * wrap definition.
+     * @param {Function} $callback
+     * @param {any[]} $parameters
+     * @returns {Function}
+     */
+    wrap($callback: Function, $parameters: any[] = []): Function {
 
     }
 
-    call($callback,  $parameters = [])
-    {
+    /**
+     * call definition.
+     * @param {*} $callback
+     * @param {any[]} $parameters
+     * @returns {*}
+     */
+    call($callback: any, $parameters: any[] = []): any {
 
     }
 
-    factory($abstract)
-    {
+    /**
+     * factory definition.
+     * @param {*} $abstract
+     * @returns {Function}
+     */
+    factory($abstract: any): Function {
 
     }
 
-    makeWith($abstract, $parameters = [])
-    {
+    /**
+     * makeWith definition.
+     * @param {*} $abstract
+     * @param {any[]} $parameters
+     * @returns {*}
+     */
+    makeWith($abstract: any, ...$parameters: any[]): any {
 
     }
 
-    make($abstract, $parameters = [])
-    {
+    /**
+     * make definition.
+     * @param {*} $abstract
+     * @param {any[]} $parameters
+     * @returns {*}
+     */
+    make($abstract: any, ...$parameters: any[]): any {
 
     }
 
-    resolve($abstract)
-    {
+    /**
+     * resolve definition.
+     * @param {*} $abstract
+     * @param {any[]} $parameters
+     * @returns {*}
+     */
+    resolve($abstract: any, $parameters: any[] = []): any {
 
     }
 
     /**
      * loadPath definition.
      * @param {*} dir
-     * @returns {any}
+     * @returns {*}
      */
-    loadPath(dir){
+    loadPath(dir: any): any {
 
     }
 
-    isBuildable($concrete)
-    {
+    /**
+     * isBuildable definition.
+     * @param {*} $concrete
+     * @returns {boolean}
+     */
+    isBuildable($concrete: any): boolean {
 
     }
 
-    build($concrete,$parameters=[])
-    {
+    /**
+     * build definition.
+     * @param {*} $concrete
+     * @param {any[]} $parameters
+     * @returns {*}
+     */
+    build($concrete: any, $parameters: any[] = []): any {
 
     }
 
-    getBindings()
-    {
+    /**
+     * getBindings definition.
+     * @returns {Record<string, any>}
+     */
+    getBindings(): Record<string, any> {
 
     }
 
     /**
      * bind definition.
-     * @param {*} key
+     * @param {string} key
      * @param {*} callback
-     * @param {*} singleton
-     * @returns {any}
+     * @param {boolean} singleton
+     * @returns {*}
      */
-    bind(key, callback,singleton=false) {
+    bind(key: string, callback: any, singleton: boolean = false): any {
 
     }
 
@@ -82,9 +122,9 @@ class Application{
      * singleton definition.
      * @param {*} $abstract
      * @param {*} $concrete
-     * @returns {any}
+     * @returns {*}
      */
-    singleton($abstract, $concrete) {
+    singleton($abstract: any, $concrete: any): any {
 
     }
 
@@ -92,31 +132,40 @@ class Application{
      * getOrCreateSingleton definition.
      * @param {*} $abstract
      * @param {*} $concrete
-     * @returns {any}
+     * @returns {*}
      */
-    getOrCreateSingleton($abstract, $concrete) {
+    getOrCreateSingleton($abstract: any, $concrete: any): any {
 
     }
 
     /**
      * app definition.
-     * @param {*} key
-     * @returns {any}
+     * @param {string} key
+     * @returns {*}
      */
-    app(key) {
+    app(key?: string): any {
 
     }
 
-    forgetInstance($abstract)
-    {
+    /**
+     * forgetInstance definition.
+     * @param {*} $abstract
+     * @returns {void}
+     */
+    forgetInstance($abstract: any): void {
 
     }
 
-    instance($abstract, $instance)
-    {
+    /**
+     * instance definition.
+     * @param {*} $abstract
+     * @param {*} $instance
+     * @returns {*}
+     */
+    instance($abstract: any, $instance: any): any {
 
     }
 
 }
 
-module.exports = Application
+module.exports = Application;
