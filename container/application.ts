@@ -3,16 +3,16 @@
  */
 interface IContainer {
     alias(alias?: Record<string, any>): void;
-    wrap($callback: Function, $parameters?: any[]): Function;
+    wrap($callback: Function, $parameters?: any[]): Function | void;
     call($callback: any, $parameters?: any[]): any;
-    factory($abstract: any): Function;
+    factory($abstract: any): Function | void;
     makeWith<T = any>($abstract: any, ...$parameters: any[]): T;
     make<T = any>($abstract: any, ...$parameters: any[]): T;
     resolve<T = any>($abstract: any, $parameters?: any[]): T;
     loadPath(dir: any): any;
-    isBuildable($concrete: any): boolean;
+    isBuildable($concrete: any): boolean | void;
     build<T = any>($concrete: any, $parameters?: any[]): T;
-    getBindings(): Record<string, any>;
+    getBindings(): Record<string, any> | void;
     bind(key: string, callback: any, singleton?: boolean): any;
     singleton($abstract: any, $concrete?: any): any;
     getOrCreateSingleton($abstract: any, $concrete?: any): any;
@@ -41,7 +41,7 @@ class Application implements IContainer {
      * @param {any[]} $parameters
      * @returns {Function}
      */
-    wrap($callback: Function, $parameters: any[] = []): Function {
+    wrap($callback: Function, $parameters: any[] = []): Function | void {
 
     }
 
@@ -60,7 +60,7 @@ class Application implements IContainer {
      * @param {*} $abstract
      * @returns {Function}
      */
-    factory($abstract: any): Function {
+    factory($abstract: any): Function | void {
 
     }
 
@@ -108,7 +108,7 @@ class Application implements IContainer {
      * @param {*} $concrete
      * @returns {boolean}
      */
-    isBuildable($concrete: any): boolean {
+    isBuildable($concrete: any): boolean | void {
 
     }
 
@@ -126,7 +126,7 @@ class Application implements IContainer {
      * getBindings definition.
      * @returns {Record<string, any>}
      */
-    getBindings(): Record<string, any> {
+    getBindings(): Record<string, any> | void {
 
     }
 

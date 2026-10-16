@@ -2,7 +2,18 @@
   "name": "@ostro/contracts",
   "version": "1.1.4",
   "description": "Contracts module for OstroJS",
+  "files": [
+    "build"
+  ],
+  "exports": {
+    "./*": {
+      "types": "./build/*.d.ts",
+      "default": "./build/*.js"
+    }
+  },
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build",
     "test": "npx c8 npx jest"
   },
   "engines": {
