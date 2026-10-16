@@ -19,7 +19,7 @@ class HttpResponse implements IHttpResponse {
         return this;
     }
 
-    header(key: string, value: any): this {
+    header(key: any, value?: any): any {
         return this;
     }
 
