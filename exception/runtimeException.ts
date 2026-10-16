@@ -1,8 +1,7 @@
 /**
- * Class RuntimeException.
+ * Class RuntimeException contract.
  */
-class RuntimeException {
-
+class RuntimeException extends Error {
 }
 
-module.exports = RuntimeException
+export = RuntimeException;

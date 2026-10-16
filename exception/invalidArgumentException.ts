@@ -1,6 +1,7 @@
 /**
- * Class InvalidArgumentException.
+ * Class InvalidArgumentException contract.
  */
-class InvalidArgumentException{
+class InvalidArgumentException extends Error {
 }
-module.exports = InvalidArgumentException
+
+export = InvalidArgumentException;

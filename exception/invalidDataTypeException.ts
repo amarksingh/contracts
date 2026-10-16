@@ -1,8 +1,7 @@
 /**
- * Class InvalidDataTypeException.
+ * Class InvalidDataTypeException contract.
  */
-class InvalidDataTypeException{
-
+class InvalidDataTypeException extends Error {
 }
 
-module.exports = InvalidDataTypeException
+export = InvalidDataTypeException;
