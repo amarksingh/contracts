@@ -20,60 +20,7 @@ interface IHttpRequest {
 /**
  * Class HttpRequest.
  */
-class HttpRequest implements IHttpRequest {
-    method: string = 'GET';
-
-    path(): string {
-        return '/';
-    }
-
-    url(): string {
-        return '';
-    }
-
-    fullUrl(): string {
-        return '';
-    }
-
-    ip(): string {
-        return '127.0.0.1';
-    }
-
-    header(key: string, defaultValue: any = null): any {
-        return defaultValue;
-    }
-
-    input(key?: string, defaultValue: any = null): any {
-        return defaultValue;
-    }
-
-    all(): Record<string, any> {
-        return {};
-    }
-
-    has(key: string | string[]): boolean {
-        return false;
-    }
-
-    filled(key: string | string[]): boolean {
-        return false;
-    }
-
-    cookie(key?: string, defaultValue: any = null): any {
-        return defaultValue;
-    }
-
-    file(key: string): any {
-        return null;
-    }
-
-    session(): any {
-        return null;
-    }
-
-    user(): any {
-        return null;
-    }
+class HttpRequest {
 }
 
 export type { IHttpRequest };
