@@ -4,4 +4,4 @@
 class IcmsException{
 
 }
-module.exports = IcmsException
+export default IcmsException

@@ -4,4 +4,4 @@
 class InvalidArgumentException extends Error {
 }
 
-export = InvalidArgumentException;
+export default InvalidArgumentException;

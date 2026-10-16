@@ -45,4 +45,4 @@ class HttpResponse implements IHttpResponse {
 }
 
 export type { IHttpResponse };
-module.exports = HttpResponse;
+export default HttpResponse;

@@ -4,4 +4,4 @@
 class InvalidDataTypeException extends Error {
 }
 
-export = InvalidDataTypeException;
+export default InvalidDataTypeException;

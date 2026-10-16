@@ -5,4 +5,4 @@ class CommandNotFoundException {
 
 }
 
-module.exports = CommandNotFoundException
+export default CommandNotFoundException

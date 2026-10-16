@@ -22,4 +22,4 @@ class Router {
 }
 
 export type { IRouter };
-module.exports = Router;
+export default Router;

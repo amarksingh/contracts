@@ -24,4 +24,4 @@ class CollectContract {
 }
 
 export type { ICollection };
-module.exports = CollectContract;
+export default CollectContract;

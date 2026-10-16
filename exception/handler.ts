@@ -4,4 +4,4 @@
 class ExceptionHandler{
 
 }
-module.exports = ExceptionHandler
+export default ExceptionHandler

@@ -20,4 +20,4 @@ class Authorizable implements IAuthorizable {
 }
 
 export type { IAuthorizable };
-module.exports = Authorizable;
+export default Authorizable;

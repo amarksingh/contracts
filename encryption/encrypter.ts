@@ -35,4 +35,4 @@ class EncrypterContract implements IEncrypter {
 }
 
 export type { IEncrypter };
-module.exports = EncrypterContract;
+export default EncrypterContract;

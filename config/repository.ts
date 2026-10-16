@@ -44,5 +44,5 @@ class Repository implements IConfigRepository {
 }
 
 export type { IConfigRepository };
-module.exports = Repository;
+export default Repository;
 

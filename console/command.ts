@@ -32,4 +32,4 @@ class Command implements ICommand {
 }
 
 export type { ICommand };
-module.exports = Command;
+export default Command;

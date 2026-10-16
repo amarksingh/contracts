@@ -75,4 +75,4 @@ class Repository implements ICacheRepository {
 }
 
 export type { ICacheRepository };
-module.exports = Repository;
+export default Repository;

@@ -192,4 +192,4 @@ class Application implements IContainer {
 }
 
 export type { IContainer };
-module.exports = Application;
+export default Application;

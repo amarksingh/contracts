@@ -97,4 +97,4 @@ class Session implements ISession {
 }
 
 export type { ISession };
-module.exports = Session;
+export default Session;

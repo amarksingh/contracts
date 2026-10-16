@@ -189,4 +189,4 @@ class Filesystem implements IFilesystem {
 }
 
 export type { IFilesystem };
-module.exports = Filesystem;
+export default Filesystem;

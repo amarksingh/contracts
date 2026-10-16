@@ -4,4 +4,4 @@
 class HttpContext{
 
 }
-module.exports = HttpContext
+export default HttpContext

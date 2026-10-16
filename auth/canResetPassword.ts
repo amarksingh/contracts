@@ -19,4 +19,4 @@ class CanResetPassword implements ICanResetPassword {
 }
 
 export type { ICanResetPassword };
-module.exports = CanResetPassword;
+export default CanResetPassword;

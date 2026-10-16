@@ -28,11 +28,12 @@ describe('@ostro/contracts Comprehensive Unit Tests & Integrity Verification', (
 
         contractFiles.forEach((filePath) => {
             const relativePath = path.relative(rootDir, filePath);
-            let exported;
+            let importedModule;
             expect(() => {
-                exported = require(filePath);
+                importedModule = require(filePath);
             }).not.toThrow();
 
+            const exported = importedModule?.default || importedModule;
             expect(exported).toBeDefined();
             expect(typeof exported === 'function' || typeof exported === 'object').toBe(true);
 
@@ -45,7 +46,8 @@ describe('@ostro/contracts Comprehensive Unit Tests & Integrity Verification', (
     });
 
     test('ApplicationContract exposes method stubs and default behavior', () => {
-        const ApplicationContract = require('../container/application');
+        const _ApplicationContract = require('../container/application');
+        const ApplicationContract = _ApplicationContract.default || _ApplicationContract;
         const app = new ApplicationContract();
 
         expect(app).toBeInstanceOf(ApplicationContract);
@@ -69,7 +71,8 @@ describe('@ostro/contracts Comprehensive Unit Tests & Integrity Verification', (
     });
 
     test('Custom subclass extending contract retains inheritance prototype chain', () => {
-        const ApplicationContract = require('../container/application');
+        const _ApplicationContract = require('../container/application');
+        const ApplicationContract = _ApplicationContract.default || _ApplicationContract;
         class CustomApp extends ApplicationContract {
             make(abstract) {
                 return `custom:${abstract}`;

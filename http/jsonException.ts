@@ -4,4 +4,4 @@
 class JsonException{
 
 }
-module.exports = JsonException
+export default JsonException

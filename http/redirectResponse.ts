@@ -4,4 +4,4 @@
 class Redirect{
 
 }
-module.exports = Redirect
+export default Redirect

@@ -4,4 +4,4 @@
 class TokenMismatchException{
 }
 
-module.exports= TokenMismatchException
+export default  TokenMismatchException

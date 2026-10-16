@@ -38,4 +38,4 @@ class Kernel implements IKernel {
 }
 
 export type { IKernel };
-module.exports = Kernel;
+export default Kernel;

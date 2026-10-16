@@ -4,4 +4,4 @@
 class MethodNotAvailable{
 
 }
-module.exports = MethodNotAvailable
+export default MethodNotAvailable

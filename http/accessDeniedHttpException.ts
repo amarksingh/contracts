@@ -3,4 +3,4 @@
  */
 class AccessDeniedHttpException{
 }
-module.exports = AccessDeniedHttpException
+export default AccessDeniedHttpException

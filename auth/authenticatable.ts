@@ -44,4 +44,4 @@ class Authenticatable implements IAuthenticatable {
 }
 
 export type { IAuthenticatable };
-module.exports = Authenticatable;
+export default Authenticatable;

@@ -4,4 +4,4 @@
 class PageNotFoundException{
 
 }
-module.exports = PageNotFoundException
+export default PageNotFoundException

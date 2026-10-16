@@ -4,4 +4,4 @@
 class UnpossibleEntityException{
 
 }
-module.exports = UnpossibleEntityException
+export default UnpossibleEntityException

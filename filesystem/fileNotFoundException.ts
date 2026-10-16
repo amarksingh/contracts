@@ -4,4 +4,4 @@
 class FileNotFoundException{
 
 }
-module.exports = FileNotFoundException
+export default FileNotFoundException

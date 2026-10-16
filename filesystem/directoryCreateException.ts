@@ -4,4 +4,4 @@
 class DirectoryCreateException{
 
 }
-module.exports= DirectoryCreateException
+export default  DirectoryCreateException

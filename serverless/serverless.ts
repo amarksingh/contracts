@@ -4,4 +4,4 @@
 class Serverless{
 
 }
-module.exports = Serverless
+export default Serverless

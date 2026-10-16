@@ -4,4 +4,4 @@
 class Input{
 
 }
-module.exports = Input
+export default Input

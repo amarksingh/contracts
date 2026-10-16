@@ -24,4 +24,4 @@ class HttpRequest {
 }
 
 export type { IHttpRequest };
-module.exports = HttpRequest;
+export default HttpRequest;

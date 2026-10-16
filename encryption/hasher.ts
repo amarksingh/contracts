@@ -4,4 +4,4 @@
 class Hasher{
 
 }
-module.exports =  Hasher
+export default  Hasher

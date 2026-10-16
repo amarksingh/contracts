@@ -4,4 +4,4 @@
 class ValidationException {
 
 }
-module.exports = ValidationException
+export default ValidationException

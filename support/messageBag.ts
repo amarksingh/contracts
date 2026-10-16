@@ -5,4 +5,4 @@ class MessageBag{
 
 }
 
-module.exports = MessageBag
+export default MessageBag

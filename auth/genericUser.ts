@@ -39,4 +39,4 @@ class GenericUserInterface implements IGenericUser {
 }
 
 export type { IGenericUser };
-module.exports = GenericUserInterface;
+export default GenericUserInterface;

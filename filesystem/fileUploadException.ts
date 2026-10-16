@@ -4,4 +4,4 @@
 class FileUploadException{
 
 }
-module.exports = FileUploadException
+export default FileUploadException

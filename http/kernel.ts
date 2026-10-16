@@ -47,4 +47,4 @@ class Kernel implements IHttpKernel {
 }
 
 export type { IHttpKernel };
-module.exports = Kernel;
+export default Kernel;

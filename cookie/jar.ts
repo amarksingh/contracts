@@ -51,4 +51,4 @@ class Jar implements ICookieJar {
 }
 
 export type { ICookieJar, CookieOptions };
-module.exports = Jar;
+export default Jar;

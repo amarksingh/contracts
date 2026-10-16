@@ -4,4 +4,4 @@
 class RuntimeException extends Error {
 }
 
-export = RuntimeException;
+export default RuntimeException;
