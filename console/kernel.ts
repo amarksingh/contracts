@@ -14,26 +14,26 @@ interface IKernel {
  * Class Kernel Contract.
  */
 class Kernel implements IKernel {
-    async handle(input?: any, output?: any): Promise<number> {
+    public async handle(input?: any, output?: any): Promise<number> {
         return 0;
     }
 
-    async callCommand(command: string, parameters: any[] = [], outputBuffer: any = null): Promise<number> {
+    public async callCommand(command: string, parameters: any[] = [], outputBuffer: any = null): Promise<number> {
         return 0;
     }
 
-    async queue(command: string, parameters: any[] = []): Promise<any> {
+    public async queue(command: string, parameters: any[] = []): Promise<any> {
     }
 
-    all(): Record<string, any> {
+    public all(): Record<string, any> {
         return {};
     }
 
-    output(): string {
+    public output(): string {
         return '';
     }
 
-    terminate(input?: any, status?: number): void {
+    public terminate(input?: any, status?: number): void {
     }
 }
 

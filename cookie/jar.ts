@@ -29,23 +29,23 @@ interface ICookieJar {
  * Class Jar Contract.
  */
 class Jar implements ICookieJar {
-    createCookies(name: string, value: any, options: CookieOptions = {}, isSecure: boolean = false): string {
+    public createCookies(name: string, value: any, options: CookieOptions = {}, isSecure: boolean = false): string {
         return '';
     }
 
-    getJsonCookies(cookies: Record<string, any>, options: Record<string, any> = {}): Record<string, any> {
+    public getJsonCookies(cookies: Record<string, any>, options: Record<string, any> = {}): Record<string, any> {
         return {};
     }
 
-    getCookies(cookies: string = '', options: Record<string, any> = {}): Record<string, any> {
+    public getCookies(cookies: string = '', options: Record<string, any> = {}): Record<string, any> {
         return {};
     }
 
-    getSignedCookies(cookies: Record<string, any>, secrets: string | string[], options: Record<string, any> = {}): Record<string, any> {
+    public getSignedCookies(cookies: Record<string, any>, secrets: string | string[], options: Record<string, any> = {}): Record<string, any> {
         return {};
     }
 
-    parse(options?: Record<string, any>): Function {
+    public parse(options?: Record<string, any>): Function {
         return () => {};
     }
 }

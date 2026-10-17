@@ -13,21 +13,21 @@ interface ICommand {
  * Class Command Contract.
  */
 class Command implements ICommand {
-    getApp(): any {
+    public getApp(): any {
         return null;
     }
 
-    setApp(app: any): void {
+    public setApp(app: any): void {
     }
 
-    getConsole(): any {
+    public getConsole(): any {
         return null;
     }
 
-    setConsole(console: any): void {
+    public setConsole(console: any): void {
     }
 
-    execute(): Promise<any> | any {
+    public execute(): Promise<any> | any {
     }
 }
 

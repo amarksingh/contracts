@@ -14,26 +14,26 @@ interface IGenericUser {
  * Class GenericUserInterface.
  */
 class GenericUserInterface implements IGenericUser {
-    getAuthIdentifierName(): string {
+    public getAuthIdentifierName(): string {
         return 'id';
     }
 
-    getAuthIdentifier(): any {
+    public getAuthIdentifier(): any {
         return null;
     }
 
-    getAuthPassword(): string | null {
+    public getAuthPassword(): string | null {
         return null;
     }
 
-    getRememberToken(): string | null {
+    public getRememberToken(): string | null {
         return null;
     }
 
-    setRememberToken(value: string | null): void {
+    public setRememberToken(value: string | null): void {
     }
 
-    getRememberTokenName(): string {
+    public getRememberTokenName(): string {
         return 'remember_token';
     }
 }

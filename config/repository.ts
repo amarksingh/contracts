@@ -38,7 +38,7 @@ class Repository implements IConfigRepository {
      * @param {string} key
      * @returns {boolean}
      */
-    has(key: string): boolean {
+    public has(key: string): boolean {
         return false;
     }
 }

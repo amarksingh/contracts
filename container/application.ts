@@ -31,7 +31,7 @@ class Application implements IContainer {
      * @param {Record<string, any>} alias
      * @returns {void}
      */
-    alias(alias: Record<string, any> = {}): void {
+    public alias(alias: Record<string, any> = {}): void {
 
     }
 
@@ -41,7 +41,7 @@ class Application implements IContainer {
      * @param {any[]} $parameters
      * @returns {Function}
      */
-    wrap($callback: Function, $parameters: any[] = []): Function | void {
+    public wrap($callback: Function, $parameters: any[] = []): Function | void {
 
     }
 
@@ -51,7 +51,7 @@ class Application implements IContainer {
      * @param {any[]} $parameters
      * @returns {*}
      */
-    call($callback: any, $parameters: any[] = []): any {
+    public call($callback: any, $parameters: any[] = []): any {
 
     }
 
@@ -60,7 +60,7 @@ class Application implements IContainer {
      * @param {*} $abstract
      * @returns {Function}
      */
-    factory($abstract: any): Function | void {
+    public factory($abstract: any): Function | void {
 
     }
 
@@ -70,7 +70,7 @@ class Application implements IContainer {
      * @param {any[]} $parameters
      * @returns {*}
      */
-    makeWith($abstract: any, ...$parameters: any[]): any {
+    public makeWith($abstract: any, ...$parameters: any[]): any {
 
     }
 
@@ -80,7 +80,7 @@ class Application implements IContainer {
      * @param {any[]} $parameters
      * @returns {*}
      */
-    make($abstract: any, ...$parameters: any[]): any {
+    public make($abstract: any, ...$parameters: any[]): any {
 
     }
 
@@ -90,7 +90,7 @@ class Application implements IContainer {
      * @param {any[]} $parameters
      * @returns {*}
      */
-    resolve($abstract: any, $parameters: any[] = []): any {
+    public resolve($abstract: any, $parameters: any[] = []): any {
 
     }
 
@@ -99,7 +99,7 @@ class Application implements IContainer {
      * @param {*} dir
      * @returns {*}
      */
-    loadPath(dir: any): any {
+    public loadPath(dir: any): any {
 
     }
 
@@ -108,7 +108,7 @@ class Application implements IContainer {
      * @param {*} $concrete
      * @returns {boolean}
      */
-    isBuildable($concrete: any): boolean | void {
+    public isBuildable($concrete: any): boolean | void {
 
     }
 
@@ -118,7 +118,7 @@ class Application implements IContainer {
      * @param {any[]} $parameters
      * @returns {*}
      */
-    build($concrete: any, $parameters: any[] = []): any {
+    public build($concrete: any, $parameters: any[] = []): any {
 
     }
 
@@ -126,7 +126,7 @@ class Application implements IContainer {
      * getBindings definition.
      * @returns {Record<string, any>}
      */
-    getBindings(): Record<string, any> | void {
+    public getBindings(): Record<string, any> | void {
 
     }
 
@@ -137,7 +137,7 @@ class Application implements IContainer {
      * @param {boolean} singleton
      * @returns {*}
      */
-    bind(key: string, callback: any, singleton: boolean = false): any {
+    public bind(key: string, callback: any, singleton: boolean = false): any {
 
     }
 
@@ -147,7 +147,7 @@ class Application implements IContainer {
      * @param {*} $concrete
      * @returns {*}
      */
-    singleton($abstract: any, $concrete: any): any {
+    public singleton($abstract: any, $concrete: any): any {
 
     }
 
@@ -157,7 +157,7 @@ class Application implements IContainer {
      * @param {*} $concrete
      * @returns {*}
      */
-    getOrCreateSingleton($abstract: any, $concrete: any): any {
+    public getOrCreateSingleton($abstract: any, $concrete: any): any {
 
     }
 
@@ -166,7 +166,7 @@ class Application implements IContainer {
      * @param {string} key
      * @returns {*}
      */
-    app(key?: string): any {
+    public app(key?: string): any {
 
     }
 
@@ -175,7 +175,7 @@ class Application implements IContainer {
      * @param {*} $abstract
      * @returns {void}
      */
-    forgetInstance($abstract: any): void {
+    public forgetInstance($abstract: any): void {
 
     }
 
@@ -185,7 +185,7 @@ class Application implements IContainer {
      * @param {*} $instance
      * @returns {*}
      */
-    instance($abstract: any, $instance: any): any {
+    public instance($abstract: any, $instance: any): any {
 
     }
 

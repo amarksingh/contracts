@@ -15,31 +15,31 @@ interface IHttpResponse {
   * Class HttpResponse.
   */
 class HttpResponse implements IHttpResponse {
-    status(code: number): this {
+    public status(code: number): this {
         return this;
     }
 
-    header(key: any, value?: any): any {
+    public header(key: any, value?: any): any {
         return this;
     }
 
-    json(data: any): this {
+    public json(data: any): this {
         return this;
     }
 
-    send(data: any): this {
+    public send(data: any): this {
         return this;
     }
 
-    cookie(name: string, value: any, options: Record<string, any> = {}): this {
+    public cookie(name: string, value: any, options: Record<string, any> = {}): this {
         return this;
     }
 
-    clearCookie(name: string, options: Record<string, any> = {}): this {
+    public clearCookie(name: string, options: Record<string, any> = {}): this {
         return this;
     }
 
-    redirect(url: string, status: number = 302): any {
+    public redirect(url: string, status: number = 302): any {
         return null;
     }
 }

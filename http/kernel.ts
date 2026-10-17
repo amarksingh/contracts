@@ -18,7 +18,7 @@ class Kernel implements IHttpKernel {
      * bootstrap definition.
      * @returns {void}
      */
-    bootstrap(): void {
+    public bootstrap(): void {
     }
 
     /**
@@ -26,7 +26,7 @@ class Kernel implements IHttpKernel {
      * @param {*} $request
      * @returns {Promise<any>}
      */
-    async handle($request: any): Promise<any> {
+    public async handle($request: any): Promise<any> {
     }
 
     /**
@@ -35,14 +35,14 @@ class Kernel implements IHttpKernel {
      * @param {*} $response
      * @returns {void}
      */
-    terminate($request: any, $response: any): void {
+    public terminate($request: any, $response: any): void {
     }
 
     /**
      * getApplication definition.
      * @returns {any}
      */
-    getApplication(): any {
+    public getApplication(): any {
     }
 }
 

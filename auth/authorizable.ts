@@ -10,11 +10,11 @@ interface IAuthorizable {
  * Class Authorizable.
  */
 class Authorizable implements IAuthorizable {
-    can(ability: string, ...args: any[]): Promise<boolean> | boolean {
+    public can(ability: string, ...args: any[]): Promise<boolean> | boolean {
         return false;
     }
 
-    cannot(ability: string, ...args: any[]): Promise<boolean> | boolean {
+    public cannot(ability: string, ...args: any[]): Promise<boolean> | boolean {
         return true;
     }
 }

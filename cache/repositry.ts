@@ -21,55 +21,55 @@ interface ICacheRepository {
  * Class Repository Contract.
  */
 class Repository implements ICacheRepository {
-    async has(key: string): Promise<boolean> {
+    public async has(key: string): Promise<boolean> {
         return false;
     }
 
-    async get<T = unknown>(key: string, defaultValue?: T | null): Promise<T | null> {
+    public async get<T = unknown>(key: string, defaultValue?: T | null): Promise<T | null> {
         return null;
     }
 
-    async put<T = unknown>(key: string, value: T, seconds: number = 0): Promise<boolean> {
+    public async put<T = unknown>(key: string, value: T, seconds: number = 0): Promise<boolean> {
         return false;
     }
 
-    async pull<T = unknown>(key: string, defaultValue?: T | null): Promise<T | null> {
+    public async pull<T = unknown>(key: string, defaultValue?: T | null): Promise<T | null> {
         return null;
     }
 
-    async many<T = unknown>(keys: string[]): Promise<Record<string, T | null>> {
+    public async many<T = unknown>(keys: string[]): Promise<Record<string, T | null>> {
         return {};
     }
 
-    async putMany(object: Record<string, unknown> = {}, seconds: number = 0): Promise<Record<string, boolean>> {
+    public async putMany(object: Record<string, unknown> = {}, seconds: number = 0): Promise<Record<string, boolean>> {
         return {};
     }
 
-    async increment(key: string, value: number = 1): Promise<number | false> {
+    public async increment(key: string, value: number = 1): Promise<number | false> {
         return false;
     }
 
-    async decrement(key: string, value: number = 1): Promise<number | false> {
+    public async decrement(key: string, value: number = 1): Promise<number | false> {
         return false;
     }
 
-    async forever<T = unknown>(key: string, value: T): Promise<boolean> {
+    public async forever<T = unknown>(key: string, value: T): Promise<boolean> {
         return false;
     }
 
-    async remember<T = unknown>(key: string, seconds: number = 0, cb: Function): Promise<T> {
+    public async remember<T = unknown>(key: string, seconds: number = 0, cb: Function): Promise<T> {
         return (null as unknown) as T;
     }
 
-    async rememberForever<T = unknown>(key: string, cb: Function): Promise<T> {
+    public async rememberForever<T = unknown>(key: string, cb: Function): Promise<T> {
         return (null as unknown) as T;
     }
 
-    async forget(key: string): Promise<boolean> {
+    public async forget(key: string): Promise<boolean> {
         return false;
     }
 
-    async flush(): Promise<boolean> {
+    public async flush(): Promise<boolean> {
         return false;
     }
 }

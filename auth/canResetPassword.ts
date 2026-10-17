@@ -10,11 +10,11 @@ interface ICanResetPassword {
  * Class CanResetPassword.
  */
 class CanResetPassword implements ICanResetPassword {
-    getEmailForPasswordReset(): string {
+    public getEmailForPasswordReset(): string {
         return '';
     }
 
-    sendPasswordResetNotification(token: string): Promise<void> | void {
+    public sendPasswordResetNotification(token: string): Promise<void> | void {
     }
 }
 

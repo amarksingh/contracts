@@ -46,144 +46,144 @@ interface IFilesystem {
  * Class Filesystem Contract.
  */
 class Filesystem implements IFilesystem {
-    async exists(path: string): Promise<boolean> {
+    public async exists(path: string): Promise<boolean> {
         return false;
     }
 
-    async missing(path: string): Promise<boolean> {
+    public async missing(path: string): Promise<boolean> {
         return true;
     }
 
-    async get(path: string): Promise<string> {
+    public async get(path: string): Promise<string> {
         return '';
     }
 
-    async put(path: string, contents: any): Promise<any> {
+    public async put(path: string, contents: any): Promise<any> {
     }
 
-    async replaceInFile(search: any, replace: any, path: string): Promise<any> {
+    public async replaceInFile(search: any, replace: any, path: string): Promise<any> {
     }
 
-    async prepend(path: string, data: any): Promise<any> {
+    public async prepend(path: string, data: any): Promise<any> {
     }
 
-    async append(path: string, data: any): Promise<any> {
+    public async append(path: string, data: any): Promise<any> {
     }
 
-    async chmod(path: string, mode?: any): Promise<any> {
+    public async chmod(path: string, mode?: any): Promise<any> {
     }
 
-    async delete(paths: string | string[]): Promise<boolean> {
+    public async delete(paths: string | string[]): Promise<boolean> {
         return true;
     }
 
-    async move(path: string, target: string): Promise<void> {
+    public async move(path: string, target: string): Promise<void> {
     }
 
-    async copy(path: string, target: string): Promise<void> {
+    public async copy(path: string, target: string): Promise<void> {
     }
 
-    async link(target: string, link: string, force: boolean = false): Promise<void> {
+    public async link(target: string, link: string, force: boolean = false): Promise<void> {
     }
 
-    async relativeLink(target: string, link: string, force: boolean = false): Promise<void> {
+    public async relativeLink(target: string, link: string, force: boolean = false): Promise<void> {
     }
 
-    name(path: string): string {
+    public name(path: string): string {
         return '';
     }
 
-    basename(path: string): string {
+    public basename(path: string): string {
         return '';
     }
 
-    dirname(path: string): string {
+    public dirname(path: string): string {
         return '';
     }
 
-    extension(path: string): string {
+    public extension(path: string): string {
         return '';
     }
 
-    guessExtension(path: string): string {
+    public guessExtension(path: string): string {
         return '';
     }
 
-    async type(path: string): Promise<string> {
+    public async type(path: string): Promise<string> {
         return 'file';
     }
 
-    mimeType(path: string): string {
+    public mimeType(path: string): string {
         return '';
     }
 
-    async size(path: string): Promise<number> {
+    public async size(path: string): Promise<number> {
         return 0;
     }
 
-    async lastModified(path: string): Promise<number> {
+    public async lastModified(path: string): Promise<number> {
         return 0;
     }
 
-    async isDirectory(directory: string): Promise<boolean> {
+    public async isDirectory(directory: string): Promise<boolean> {
         return false;
     }
 
-    async isReadable(path: string): Promise<boolean> {
+    public async isReadable(path: string): Promise<boolean> {
         return false;
     }
 
-    async isWritable(path: string): Promise<boolean> {
+    public async isWritable(path: string): Promise<boolean> {
         return false;
     }
 
-    async isFile(file: string): Promise<boolean> {
+    public async isFile(file: string): Promise<boolean> {
         return false;
     }
 
-    async glob(pattern: string): Promise<string[]> {
+    public async glob(pattern: string): Promise<string[]> {
         return [];
     }
 
-    async requireOnce(path: string, data: any[] = []): Promise<any> {
+    public async requireOnce(path: string, data: any[] = []): Promise<any> {
     }
 
-    async files(directory: string, hidden: boolean = false): Promise<string[]> {
+    public async files(directory: string, hidden: boolean = false): Promise<string[]> {
         return [];
     }
 
-    async allFiles(directory: string, hidden: boolean = false): Promise<string[]> {
+    public async allFiles(directory: string, hidden: boolean = false): Promise<string[]> {
         return [];
     }
 
-    async directories(directory: string): Promise<string[]> {
+    public async directories(directory: string): Promise<string[]> {
         return [];
     }
 
-    async ensureDirectoryExists(path: string, mode: any = 0o755, recursive: boolean = true): Promise<boolean> {
+    public async ensureDirectoryExists(path: string, mode: any = 0o755, recursive: boolean = true): Promise<boolean> {
         return true;
     }
 
-    async makeDirectory(path: string, mode: any = 0o755, recursive: boolean = false, force: boolean = false): Promise<any> {
+    public async makeDirectory(path: string, mode: any = 0o755, recursive: boolean = false, force: boolean = false): Promise<any> {
     }
 
-    async moveDirectory(from: string, to: string, overwrite: boolean = false): Promise<boolean> {
+    public async moveDirectory(from: string, to: string, overwrite: boolean = false): Promise<boolean> {
         return false;
     }
 
-    async copyDirectory(directory: string, destination: string, options: Record<string, any> = {}): Promise<boolean> {
+    public async copyDirectory(directory: string, destination: string, options: Record<string, any> = {}): Promise<boolean> {
         return false;
     }
 
-    async deleteDirectory(directory: string, preserve: boolean = false): Promise<boolean> {
+    public async deleteDirectory(directory: string, preserve: boolean = false): Promise<boolean> {
         return false;
     }
 
-    async deleteDirectories(directory: string): Promise<boolean> {
+    public async deleteDirectories(directory: string): Promise<boolean> {
         return false;
     }
 
-    async cleanDirectory(directory: string): Promise<boolean> {
+    public async cleanDirectory(directory: string): Promise<boolean> {
         return false;
     }
 }
