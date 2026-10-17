@@ -1,7 +1,7 @@
 # @ostro/contracts — Antigravity AI Architecture & Knowledge Base
 
 > **Package Name**: `@ostro/contracts`
-> **Version**: `1.1.4`
+> **Version**: `2.0.0-alpha.1`
 > **Role in Ecosystem**: Modular Core Framework Library
 
 ---
