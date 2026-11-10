@@ -6,6 +6,7 @@ import type { IAuthRequest } from '../auth/guard';
  */
 interface IHttpRequest {
     path(): string;
+    url?(): string;
     fullUrl(): string;
     ip(): string;
     header(key: string, defaultValue?: any): any;
@@ -17,7 +18,10 @@ interface IHttpRequest {
     expectsJson(): boolean;
     method?(): string;
     query?: Record<string, any>;
-    url?: string;
+    getQuery?(key?: string, defaultValue?: any): any;
+    bearerToken?(): string | undefined;
+    getPassword?(): string | undefined;
+    secure?(): boolean;
     params?: Record<string, any>;
     cookie?(key?: string, defaultValue?: any): any;
     session?: any;

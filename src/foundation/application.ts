@@ -11,6 +11,12 @@ interface IApplication extends IContainerApplication {
     boot(): void;
     booted(callback: Function): void;
     booting(callback: Function): void;
+    basePath(path?: string): string;
+    storagePath(path?: string): string;
+    configPath(path?: string): string;
+    databasePath(path?: string): string;
+    resourcePath(path?: string): string;
+    publicPath(path?: string): string;
     [key: string]: any;
 }
 
@@ -33,6 +39,24 @@ class ApplicationContract {
     public boot(): void {}
     public booted(callback: Function): void {}
     public booting(callback: Function): void {}
+    public basePath(path: string = ''): string {
+        return '';
+    }
+    public storagePath(path: string = ''): string {
+        return '';
+    }
+    public configPath(path: string = ''): string {
+        return '';
+    }
+    public databasePath(path: string = ''): string {
+        return '';
+    }
+    public resourcePath(path: string = ''): string {
+        return '';
+    }
+    public publicPath(path: string = ''): string {
+        return '';
+    }
 }
 
 export type { IApplication };
