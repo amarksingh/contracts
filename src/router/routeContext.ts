@@ -35,7 +35,9 @@ interface RouteViewFunction {
 interface HttpContext {
     request: IHttpRequest;
     response: IHttpResponse;
+    params?: Record<string, any>;
     auth?: IAuthRequest;
+    session?: any;
     view: RouteViewFunction;
     [key: string]: any;
 }
